@@ -1,0 +1,38 @@
+# Capacidades do provedor genérico (fallback).
+# Usado quando execute_generation: false ou quando nenhum provedor específico
+# é configurado.
+
+provider: generic
+version: "1.0"
+
+video:
+  max_duration_seconds: 300
+  supported_aspect_ratios:
+    - "16:9"
+    - "9:16"
+    - "1:1"
+  supported_resolutions:
+    - "720p"
+    - "1080p"
+    - "4k"
+  max_fps: 60
+  supports_camera_control: false
+
+image:
+  max_resolution_px: 4096
+  supported_formats:
+    - "png"
+    - "jpg"
+    - "webp"
+  supports_inpainting: false
+  supports_outpainting: false
+  supports_style_reference: false
+
+audio:
+  max_duration_seconds: 600
+  supports_voice_cloning: false
+  supports_music_generation: true
+  supports_sound_effects: true
+  supported_languages:
+    - "pt-BR"
+    - "en-US"

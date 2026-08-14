@@ -1,0 +1,50 @@
+PEDRO_ARTE_YOUTUBE_LIVING_BOOK_ENGINE
+Copyright (c) 2026 Pedro Arte / Pedro Arte Labs. Todos os direitos reservados.
+
+Este produto é software proprietário. Consulte LICENSE.
+
+-------------------------------------------------------------------------------
+DECISÃO DE LICENCIAMENTO
+-------------------------------------------------------------------------------
+O repositório `pedroartelabs/pedroarte-labs-motor-youtube-videos-vivos` é
+privado. Conforme a seção 32 da especificação do motor, nenhuma licença aberta
+foi aplicada sem solicitação explícita. Adotou-se um aviso proprietário com o
+identificador SPDX `LicenseRef-Proprietary`, equivalente a `UNLICENSED`.
+
+A decisão está registrada em `docs/adr/ADR-006-licensing.md`.
+
+-------------------------------------------------------------------------------
+DEPENDÊNCIAS DE TERCEIROS
+-------------------------------------------------------------------------------
+Este software depende dos seguintes pacotes, distribuídos sob suas próprias
+licenças. Nenhum código de terceiros é copiado para dentro deste repositório.
+
+  pydantic     — MIT
+  typer        — MIT
+  rich         — MIT
+  PyYAML       — MIT
+  Jinja2       — BSD-3-Clause
+  jsonschema   — MIT
+
+Extras opcionais:
+
+  fastapi      — MIT
+  uvicorn      — BSD-3-Clause
+  pypdf        — BSD-3-Clause
+  python-docx  — MIT
+  EbookLib     — AGPL-3.0        (extra `parsers`, não instalado por padrão)
+  beautifulsoup4 — MIT
+  pytest, pytest-cov, hypothesis, ruff, mypy, pre-commit — MIT / BSD
+
+ATENÇÃO: `EbookLib` é distribuído sob AGPL-3.0. Ele integra apenas o extra
+opcional `parsers` e não é instalado na configuração padrão. Avalie as
+implicações da AGPL antes de habilitar a ingestão de EPUB em um produto
+distribuído.
+
+-------------------------------------------------------------------------------
+CONTEÚDO DE EXEMPLO
+-------------------------------------------------------------------------------
+A obra sintética "O Relojoeiro de Vidro", presente em
+`examples/sample_living_book/` e `tests/fixtures/sample_book/`, é original,
+escrita especificamente para servir de fixture determinística deste repositório.
+Nenhum livro comercial protegido é distribuído como exemplo ou fixture.

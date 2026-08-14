@@ -1,0 +1,65 @@
+# Exemplo de configuração de projeto para o PEDRO_ARTE_YOUTUBE_LIVING_BOOK_ENGINE.
+#
+# Copie este arquivo para a sua pasta de entrada (input/) e ajuste conforme
+# necessário. Campos omitidos usam os valores padrão do motor.
+
+project:
+  title: "A Lenda do Vale Esquecido"
+  author: "Autor Exemplo"
+  language:
+    code: "pt-BR"
+  project_slug: "lenda-vale-esquecido"
+
+rights:
+  user_confirms_adaptation_rights: true
+  rights_holder: "Autor Exemplo"
+  notes: "Obra original com todos os direitos de adaptação audiovisual."
+
+formats:
+  main_10_minutes: true
+  shorts: true
+  long_form: true
+  series: true
+  mini_novela: true
+  trailers: true
+
+segmentation:
+  target_segment_seconds: 10.0
+
+main_video:
+  duration_minutes: 10.0
+  aspect_ratio:
+    width: 16
+    height: 9
+  frame_rate: 24
+
+shorts:
+  enabled: true
+  quantity: 6
+  duration_profiles: [30, 60]
+
+series:
+  enabled: true
+  episode_duration_minutes: 8.0
+  min_episodes: 6
+  max_episodes: 12
+
+audio:
+  narration_enabled: true
+  dialogue_enabled: true
+  music_enabled: true
+  speech_rate_wpm: 150.0
+
+providers:
+  prompt_target: "generic"
+  execute_generation: false
+
+quality:
+  max_repair_iterations: 3
+  minimum_approval_score: 0.90
+
+rag:
+  enabled: true
+  retrieval_mode: "hybrid"
+  top_k: 8
+  embedding_dimensions: 256
