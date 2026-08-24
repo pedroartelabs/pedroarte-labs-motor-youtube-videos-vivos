@@ -42,6 +42,12 @@ dependencies = [
 [project.optional-dependencies]
 api = ["fastapi>=0.111", "uvicorn[standard]>=0.30"]
 parsers = ["pypdf>=4.2", "python-docx>=1.1", "EbookLib>=0.18", "beautifulsoup4>=4.12"]
+# YouTube Lite (src/pedroarte_youtube_engine/lite/) — narração (Gate 3B/3B.2)
+# e geração de imagem (Gate 3C) de qualidade de publicação. Status: ambas
+# E2-approved (aprovadas por bake-off/prova de escala/autorização humana
+# explícita), NÃO dependências de produção/E4 permanentes — ver
+# docs/youtube-lite/SDD_SPDD.md §43-45 para os registros de risco.
+lite = ["edge-tts>=7.2,<8", "openai>=3.0,<4"]
 dev = [
     "pytest>=8.2",
     "pytest-cov>=5.0",
